@@ -112,6 +112,22 @@ exports.metrics = {
   VRMS : { name:'VRMS', regexp:/VRMS\:([\d\.]+)(?:V)?/i, value:'', unit:'V', },
   IRMS : { name:'IRMS', regexp:/IRMS\:([\d\.]+)(?:A)?/i, value:'', unit:'A', },
   WATT : { name:'W', regexp:/W\:([\d\.]+)(?:W)/i, value:'', unit:'W', pin:1, },
+  
+  
+ //SMD220Mote
+  VRMS : { name: 'VRMS', regexp:/Voltage:\:([\d\.]+)(?:V)?/i, value:'', unit:'V', },
+  IRMS : { name: 'IRMS', regexp:/Current:\:([\d\.]+)(?:V)?/i, value:'', unit:'I', }, 
+  ACTPWR : { name: 'ACTPWR', regexp:/Active_Power:\:([\d\.]+)(?:V)?/i, value:'', unit:'W', },
+  AppPWR : { name: 'AppPWR', regexp:/Apparent_powe:\:([\d\.]+)(?:V)?/i, value:'', unit:'W', },
+  RPWR : { name: 'RPWR', regexp:/Reactive_powe:\:([\d\.]+)(?:V)?/i, value:'', unit:'W', },
+  PF : { name: 'PF', regexp:/Power_factor:\:([\d\.]+)(?:V)?/i, value:'', unit:'_', },
+  PH : { name: 'PH', regexp:/Phase:\:([\d\.]+)(?:V)?/i, value:'', unit:'°', },
+  Freq : { name: 'FREQ', regexp:/Frequency:\:([\d\.]+)(?:V)?/i, value:'', unit:'Hz', },
+  KWH : { name: 'KWH', regexp:/Total Power:\:([\d\.]+)(?:V)?/i, value:'', unit:'KWH', },
+ 
+  VRMS : { name:'VRMS', regexp:/VRMS\:([\d\.]+)(?:V)?/i, value:'', unit:'V', },
+  IRMS : { name:'IRMS', regexp:/IRMS\:([\d\.]+)(?:A)?/i, value:'', unit:'A', },
+  WATT : { name:'W', regexp:/W\:([\d\.]+)(?:W)/i, value:'', unit:'W', pin:1, },
 
   //WaterMote
   GPM : { name:'GPM', regexp:/GPM\:([\d\.]+)/i, value:'', unit:'gpm', graph:1, graphOptions : { lines: { lineWidth:1 }, colors:['#09c'], /*yaxis: { ticks: [1,5,20], transform:  function(v) {return v==0?v:Math.log(v); //log scale },*/ tickDecimals: 2 } },
